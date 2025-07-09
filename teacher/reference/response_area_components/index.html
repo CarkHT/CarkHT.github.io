@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/teacher/reference/response_area_components/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Response Area Components - Lambda Feedback Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Lambda Feedback Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../.." class="dropdown-item">Welcome to Lambda Feedback!</a>
+</li>
+                                    
+<li>
+    <a href="../../../publications/" class="dropdown-item">Publications</a>
+</li>
+                                    
+<li>
+    <a href="../../../opportunities/" class="dropdown-item">Opportunities</a>
+</li>
+                                    
+<li>
+    <a href="../../../terminology/" class="dropdown-item">Terminology</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/major_releases/" class="dropdown-item">Major releases</a>
+</li>
+            
+<li>
+    <a href="../../../releases/detailed_releases/" class="dropdown-item">Detailed Releases</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Previous releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/relases_2023_24/" class="dropdown-item">2023-24</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../releases/status/" class="dropdown-item">Status</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Students</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../student/" class="dropdown-item">Student/User Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/getting_started_student/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/answering_questions/" class="dropdown-item">Answering Questions</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/response_areas/" class="dropdown-item">Response Areas</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/lexdown_student/" class="dropdown-item">Text Editing</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Teachers</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Teacher and Content-author Documentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guides</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../guides/gettingstarted/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../guides/content-sets-questions/" class="dropdown-item">Editing questions</a>
+</li>
+            
+<li>
+    <a href="../../guides/question-export-import/" class="dropdown-item">Exporting and importing questions</a>
+</li>
+            
+<li>
+    <a href="../../guides/lexdown/" class="dropdown-item">Milkdown</a>
+</li>
+            
+<li>
+    <a href="../../guides/analytics/" class="dropdown-item">Analytics</a>
+</li>
+            
+<li>
+    <a href="../../guides/good-practice/" class="dropdown-item">Good practice</a>
+</li>
+            
+<li>
+    <a href="../../guides/faq/" class="dropdown-item">FAQ</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guidance</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../guides/guidance/guidance-time-suggestion/" class="dropdown-item">Guidance Time Suggestion</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Reference</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../access_control/" class="dropdown-item">Access control</a>
+</li>
+            
+<li>
+    <a href="../latex_functionality/" class="dropdown-item">Latex functionality</a>
+</li>
+            
+<li>
+    <a href="../pdf_generation/" class="dropdown-item">PDF generation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Response Area Components</a>
+</li>
+            
+<li>
+    <a href="Text/" class="dropdown-item">Text</a>
+</li>
+            
+<li>
+    <a href="Number/" class="dropdown-item">Number</a>
+</li>
+            
+<li>
+    <a href="Boolean/" class="dropdown-item">Boolean</a>
+</li>
+            
+<li>
+    <a href="NumericUnits/" class="dropdown-item">NumericUnits</a>
+</li>
+            
+<li>
+    <a href="Expression/" class="dropdown-item">Expression</a>
+</li>
+            
+<li>
+    <a href="MultipleChoice/" class="dropdown-item">MultipleChoice</a>
+</li>
+            
+<li>
+    <a href="Matrix/" class="dropdown-item">Matrix</a>
+</li>
+            
+<li>
+    <a href="Table/" class="dropdown-item">Table</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../evaluation_functions/" class="dropdown-item">Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Advanced</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../advanced/" class="dropdown-item">Advanced users</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/response_areas/overview/" class="dropdown-item">Overview</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/quickstart/" class="dropdown-item">Quickstart Guide</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/specification/" class="dropdown-item">General Specification</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/feedback/" class="dropdown-item">Feedback</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/module/" class="dropdown-item">Evaluation Function Utils</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployed Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/" class="dropdown-item">Deployed Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/alternate_languages/" class="dropdown-item">Alternate Function Languages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Chat functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/chat_functions/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/chat_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../pdf_generation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="Text/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lambda-feedback/user-documentation/blob/main/docs/teacher/reference/response_area_components/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#response-area-components" class="nav-link">Response Area Components</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#response-area-creation" class="nav-link">Response Area creation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#response-area-configuration" class="nav-link">Response Area configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#restrictions-on-changes-the-input-type" class="nav-link">Restrictions on changes: the input type</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="response-area-components">Response Area Components</h1>
+<p>These are what the user interacts with on the front-end. They check an input given by the student, and provide feedback. As React components, they admit a certain number of parameters which are described in this section.</p>
+<p><img alt="Screenshot" src="screenshots/Responsearea.png" /></p>
+<h2 id="response-area-creation">Response Area creation</h2>
+<p>Response areas are added to the question field, and are configured for each question in the set.</p>
+<h3 id="add-response-area">Add Response Area</h3>
+<p>The user can add any number of response areas to a question part. These may be separated by text fields. If desired, adding a double space in the field will space out response areas.</p>
+<h3 id="duplicate">Duplicate</h3>
+<p>The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, data entered in the teacher edit mode is copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) is not copied.</p>
+<h3 id="reorder">Reorder</h3>
+<p>It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way a reordering of parts:</p>
+<p>Move your mouse cursor over the response are you want to move. Then, press and hold down the left mouse button, move the object to the location you desire, and release the mouse button to set it down.</p>
+<h3 id="delete-response-area">Delete Response Area</h3>
+<p>The user can delete a response area without any restrictions. A popup message appears to confirm the deletion.</p>
+<p>However, it is important to remember that there might be submissions against the response area you are trying to delete. If this is the case, the popup message will contain the relevant information.</p>
+<p>See more information about analytics against deleted response areas in <a href="../../guides/analytics">Analytics</a></p>
+<h2 id="response-area-configuration">Response Area configuration</h2>
+<p>The user can configure a response area using the configure button:
+<img alt="conifgure button" src="../images/configure.png" />
+which opens the 'Response Area Panel'. The panel follows a workflow designed around the way a teacher thinks:</p>
+<ul>
+<li>Input</li>
+<li>Evaluation</li>
+<li>Feedback</li>
+<li>Tests</li>
+</ul>
+<p>Each stage is in a separate tab. Teachers are recommended to be mindful of this process when creating a response area.</p>
+<h3 id="input">Input</h3>
+<p><img alt="Screenshot" src="screenshots/Inputfield.png" /></p>
+<ul>
+<li>Select an input style for the student by scrolling or filtering. These consist of the following:</li>
+<li>Matrix</li>
+<li>Number</li>
+<li>Boolean (True/false)</li>
+<li>Text (Suitable for short text answers)</li>
+<li>Table</li>
+<li>Multiple-choice</li>
+<li>Expression (Gives a preview for the typed symbolic expression)</li>
+<li>Numeric units (Two fields, allowing for units to be assessed)</li>
+<li>Code</li>
+<li>Essay (Suitable for long text answers)</li>
+<li>Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to number, as this supports isSimilar, while assessing an equation is best suited to the expression foeld, as this supports compareExpressions.</li>
+<li>Each input field may be configured with a series of options:</li>
+<li>Enable live preview. Default TRUE for the EXPRESSION input type, to validate student input before submitting for feedback.</li>
+<li>Display input symbols. Default FALSE. When TRUE, the symbols and associated shortcut codes that may be required for a problem are displayed beneath the input field. These are configured in the 'Evaluate' tab. </li>
+<li>Include in PDF. Default FALSE except for MCQ. Only affects the PDF version. Includes pre/post response text in the PDF, with a blank space between.</li>
+<li>Pre/post response text (optional). To clarify to students what to input in the response area. Accepts plain text, including single-dollar-delimited latex. E.g. <code>Estimate $f(x)=$</code> is acceptable. When using fractions in this field, use <code>$\dfrac{}{}$</code> as this is more legible.</li>
+<li>Answer. Enter a reference answer. This will typically be the absolute solution to a problem. When requesting a symbolic answer, it must be given in terms of the chosen symbol shortcuts.  Configure the answer where relevant (e.g. number of rows and columns).</li>
+<li>Response Area Preview: for teachers to verify the configuration</li>
+<li>
+<p>EVALUATE: configure how student expressions are evaluated. This is a 'no code' parametric configuration. Settings will be upgraded as the system improves.</p>
+</li>
+<li>
+<p><a href="https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/">Evaluation Function</a> - select an evaluation function from the list. For example:</p>
+<ul>
+<li>isSimilar will perform a basic numerical comparison between the reference answer and         student input, with a configurable level of absolute and relative uncertainty.</li>
+<li>compareExpressions is typically used where a symbolic answer is requested.</li>
+</ul>
+</li>
+<li>Parameters - configure as provided, and add new parameters as required. Details depend on the Evaluation Function.</li>
+<li>
+<p>Input symbols - define a dictionary of symbols and their equivalent in code form. This essentially associates a LaTeX-rendered symbol with a machine-readable variable label, with the LaTeX render returned to the student through the preview. These symbols may also be hiddent to students. All inputs are plain text. For example, the symbol <code>$f(x)$</code> may have code <code>fx</code> and alternatives <code>f_x</code>, <code>f(x)</code>, <code>f</code>. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. This allow teachers to accept several alternative symbols, such as those with different cases or conventional expressions. The configuration of input symbols is a very important part of providing high quality feedback. Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden to the student but visible to the evaluation function.</p>
+</li>
+<li>
+<p>FEEDBACK: add 'cases'. Each case is an alternative reference answer, with customised parameters, so that multiple cases can be dealt with independently. Cases can be used to capture multiple correct approaches that are not equivalent. Cases can also be used to identify common incorrect approaches and to provide customised feedback. The FEEDBACK tab is typically populated after students start using the system, and when data is available to point to common expressions. Configuring a case works similarly to setting up the default answer in the INPUT tab, with added options for changing the colour of the given feedback, give custom feedback and toggling whether the case answer should be considered correct or not. Adding custom feedback will overwrite the feedback produced by the evaluation function. When a response is submitted, it is evaluated for all cases and feedback for the first case that matches will be displayed. When determining which matched case is first, the default answer described in the INPUT tab will take precedence over all other cases, otherwise the feedback for the matched case with the lowest number will be displayed (i.e. the answer given in the INPUT tab can be considered to be Case 0). <br> Feedback fields also support LaTeX equations in both <code>$f(x)$</code> and <code>$$f(x)$$</code> formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.</p>
+</li>
+</ul>
+<p><img alt="Screenshot" src="screenshots/Feedback.gif" /></p>
+<ul>
+<li>TESTS: tests provide a systematic way to log what behaviour the teacher expects. It provides a useful record and an efficient way to retest the bevhaiour of a response area over time (e.g. as evaluation functions evolve, or as the subject matter itself changes).</li>
+</ul>
+<h2 id="restrictions-on-changes-the-input-type">Restrictions on changes: the input type</h2>
+<p>It is possible to change the input type (e.g. from <em>Text</em> to <em>Number</em>) without any restrictions until the response area is saved (with or without publishing) to students.</p>
+<p>After the response area is saved, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.</p>
+<p>Student answers, click events and statisticsthose data are never lost by deleting a response area, they are always preserved. Once a question is saved (with or without publishing), then any new changes are saved into a new (draft) version of the question. So, if e.g. a response area is deleted after a question was published, then it is deleted from the draft version only. And if this draft version is later published, then the previously published version is preserved (and with it the "deleted" response area and linked submissions).</p>
+<p>The reason why the input type change is restricted is to preserve high quality data analytics as explained in the examples below.</p>
+<h3 id="an-example-1-changing-input-type-on-published-response-area">An Example 1 - changing input type on PUBLISHED response area</h3>
+<h4 id="first-part">FIRST Part</h4>
+<ul>
+<li>The teacher creates a new question with Response Areas RA1 and RA2. -&gt; The version of the question is QV1 with status DRAFT.</li>
+<li>The teacher is making changes (including the change of the input type if needed). -&gt; The changes are being saved into QV1 with no restrictions</li>
+<li>The teacher performs PUBLISH action (let's assume RA1 and RA2 input types are both <em>Number</em> for this example). -&gt; The QV1 version status is changed to PUBLISHED</li>
+<li>Students are submitting their answers -&gt; submissions are recorder against Response Area RA1 and RA2 (in the single <em>Number</em> format for both response areas)</li>
+<li>The teacher clicks on a question to edit it -&gt; with the first click a new question version QV2 is created with status DRAFT</li>
+<li>The teacher makes following changes (which are being recorded against QV2):<ul>
+<li>In RA1: adds a new Input Symbol -&gt; the change is recorded against RA1</li>
+<li>In RA2: the teacher unlocks and changes the input type -&gt; RA2 is deleted (from the question version QV2) and a new response area RA3 is created (let's assume input type <em>Table</em> for this example)</li>
+</ul>
+</li>
+<li>The teacher performs PUBLISH action -&gt; the QV2 is published (with response area RA1 with input type <em>Number</em> and response area RA3 with input type <em>Table</em>)</li>
+<li>Students are submitting their answers -&gt; submissions are recorder against Response Area RA1 (in the single <em>Number</em> format) and against Response Area RA3 (in the <em>Table</em> format)</li>
+</ul>
+<p>=&gt; No submissions are lost. The original submissions (in the <em>Number</em> format) are linked to the RA2, which is preserved on the question version QV1. New submissions (in the <em>table</em> format) are linked to the RA3 which is recorded on the question version QV2.</p>
+<p><strong>Please note:</strong> All statistics and submissions are currently displayed against the published question version only. So, though the submissions against RA2 are preserved, it is not currently possible to see them. We are working on the improvement to make this possible.</p>
+<h4 id="second-part-this-is-an-extension-of-the-first-part">SECOND Part - this is an extension of the FIRST Part</h4>
+<ul>
+<li>The teacher decides to REVERT (the question created in the FIRST Part) to the question version QV1 -&gt; a new question version QV3 is created and the content of the QV1 is copied to QV3 -&gt; QV3 is DRAFT version which contains RA1 (input type <em>Number</em>) and RA2 (input type <em>Number</em>)</li>
+<li>The teacher performs PUBLISH action -&gt; the QV3 is published and the teacher can now see submissions against RA1 and RA2, but he cannot see anymore submissions against RA3 (these are preserved against the QV2 version)</li>
+</ul>
+<h3 id="an-example-2-changing-input-type-on-saved-response-area">An Example 2 - changing input type on SAVED response area</h3>
+<ul>
+<li>The teacher creates a new question with Response Areas RA1 and RA2. -&gt; The version of the question is QV1 with status DRAFT.</li>
+<li>The teacher is making changes (including the change of the input type if needed). -&gt; The changes are being saved into QV1 with no restrictions</li>
+<li>The teacher performs SAVE action (let's assume RA1 and RA2 input types are both <em>Number</em> for this example). -&gt; The QV1 version status is changed to SAVED</li>
+<li>The teacher clicks on a question to edit it -&gt; with the first click a new question version QV2 is created with status DRAFT</li>
+<li>The teacher makes following changes (which are being recorded against QV2):<ul>
+<li>In RA1: adds a new Input Symbol -&gt; the change is recorded against RA1</li>
+<li>In RA2: the teacher unlocks and changes the input type -&gt; RA2 is deleted (from the question version QV2) and a new response area RA3 is created (let's assume input type <em>Table</em> for this example)</li>
+</ul>
+</li>
+<li>The teacher performs PUBLISH action -&gt; the QV2 is published (with response area RA1 with input type <em>Number</em> and response area RA3 with input type <em>Table</em>)</li>
+<li>Students are submitting their answers -&gt; submissions are recorder against Response Area RA1 (in the single <em>Number</em> format) and against Response Area RA3 (in the <em>Table</em> format)</li>
+<li>The teacher decides to REVERT to the question version QV1 -&gt; a new question version QV3 is created and the content of the QV1 is copied to QV3 -&gt; QV3 is DRAFT version which contains RA1 (input type <em>Number</em>) and RA2 (input type <em>Number</em>)</li>
+<li>The teacher performs PUBLISH action -&gt; the QV3 is published and the teacher can now see submissions against RA1. There are no submissions against RA2 as it has not been (until now) published. Submissions against RA3 are not visible, but they are preserved against the question version QV2.</li>
+</ul>
+<h3 id="an-example-3-adding-new-response-area-to-a-published-question">An Example 3 - adding new response area to a published question</h3>
+<ul>
+<li>The teacher creates a new question with Response Areas RA1 and RA2. -&gt; The version of the question is QV1 with status DRAFT.</li>
+<li>The teacher is making changes (including the change of the input type if needed). -&gt; The changes are being saved into QV1 with no restrictions</li>
+<li>The teacher performs SAVE (or PUBLISH) action (let's assume RA1 and RA2 input types are both <em>Number</em> for this example). -&gt; The QV1 version status is changed to SAVE (or PUBLISHED)</li>
+<li>The teacher clicks on a question to edit it -&gt; with the first click a new question version QV2 is created with status DRAFT</li>
+<li>The teacher adds a new response area RA3</li>
+</ul>
+<p>=&gt; At this point the teacher is making changes in the question version QV2 (DRAFT) in which:</p>
+<pre><code>- The input types of RA1 and RA2 are locked, because they exist on a saved version QV1. It does not matter if QV1 is (only) saved or published or if there are  or there are not existing submissions. The reason why it is locked is that the teacher can revert into this version later after submissions are created. By locking it we are making sure that the "unlock" process will be triggered which will preserve the original response area and it will create a new response area and it will make sure that the submissions are linked to response area with compatible input type.
+- The input type of RA3 is not locked at this point, because RA3 does not (yet) exist on any saved question version.
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../scripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/advanced/evaluation_functions/specification/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>General Specification - Lambda Feedback Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Lambda Feedback Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../.." class="dropdown-item">Welcome to Lambda Feedback!</a>
+</li>
+                                    
+<li>
+    <a href="../../../publications/" class="dropdown-item">Publications</a>
+</li>
+                                    
+<li>
+    <a href="../../../opportunities/" class="dropdown-item">Opportunities</a>
+</li>
+                                    
+<li>
+    <a href="../../../terminology/" class="dropdown-item">Terminology</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/major_releases/" class="dropdown-item">Major releases</a>
+</li>
+            
+<li>
+    <a href="../../../releases/detailed_releases/" class="dropdown-item">Detailed Releases</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Previous releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/relases_2023_24/" class="dropdown-item">2023-24</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../releases/status/" class="dropdown-item">Status</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Students</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../student/" class="dropdown-item">Student/User Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/getting_started_student/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/answering_questions/" class="dropdown-item">Answering Questions</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/response_areas/" class="dropdown-item">Response Areas</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/lexdown_student/" class="dropdown-item">Text Editing</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Teachers</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../teacher/" class="dropdown-item">Teacher and Content-author Documentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guides</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/guides/gettingstarted/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/content-sets-questions/" class="dropdown-item">Editing questions</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/question-export-import/" class="dropdown-item">Exporting and importing questions</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/lexdown/" class="dropdown-item">Milkdown</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/analytics/" class="dropdown-item">Analytics</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/good-practice/" class="dropdown-item">Good practice</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/faq/" class="dropdown-item">FAQ</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guidance</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/guides/guidance/guidance-time-suggestion/" class="dropdown-item">Guidance Time Suggestion</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Reference</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/access_control/" class="dropdown-item">Access control</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/latex_functionality/" class="dropdown-item">Latex functionality</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/pdf_generation/" class="dropdown-item">PDF generation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/" class="dropdown-item">Response Area Components</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Text/" class="dropdown-item">Text</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Number/" class="dropdown-item">Number</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Boolean/" class="dropdown-item">Boolean</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/NumericUnits/" class="dropdown-item">NumericUnits</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Expression/" class="dropdown-item">Expression</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/MultipleChoice/" class="dropdown-item">MultipleChoice</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Matrix/" class="dropdown-item">Matrix</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Table/" class="dropdown-item">Table</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/evaluation_functions/" class="dropdown-item">Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Advanced</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Advanced users</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../response_areas/overview/" class="dropdown-item">Overview</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../quickstart/" class="dropdown-item">Quickstart Guide</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">General Specification</a>
+</li>
+            
+<li>
+    <a href="../feedback/" class="dropdown-item">Feedback</a>
+</li>
+            
+<li>
+    <a href="../local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+            
+<li>
+    <a href="../module/" class="dropdown-item">Evaluation Function Utils</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployed Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Deployed Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../alternate_languages/" class="dropdown-item">Alternate Function Languages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Chat functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../chat_functions/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+            
+<li>
+    <a href="../../chat_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quickstart/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../feedback/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lambda-feedback/user-documentation/blob/main/docs/advanced/evaluation_functions/specification.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#evaluation-function-specification" class="nav-link">Evaluation Function Specification</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction-and-philosophy" class="nav-link">Introduction and Philosophy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#commands" class="nav-link">Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#base-layer" class="nav-link">Base Layer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#file-structure" class="nav-link">File Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluationpy" class="nav-link">evaluation.py</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluation_testspy" class="nav-link">evaluation_tests.py</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#documentation" class="nav-link">Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="evaluation-function-specification">Evaluation Function Specification</h1>
+<h2 id="introduction-and-philosophy">Introduction and Philosophy</h2>
+<p>Functionality for each evaluation function is split up as follows:</p>
+<p>!!! note ""
+Universal function behaviour applicable to <em>every</em> function, such as the ability to run tests, return documentation and execute the evaluation is handled by the <a href="#base-layer"><strong>Base Layer</strong></a>. This is the docker image which is extended by every developed evaluation function.</p>
+<p>!!! abstract ""
+Functionality that may be required in more than one function (but not necessarily all), such as the ability to call already deployed functions and error reporting is handled by the <a href="../module/"><strong>evaluation_function_utils</strong></a> python package. This package comes pre-installed in the base layer, and can optionally be imported and called from the <em>evaluation_function</em>.</p>
+<p>!!! info ""
+Finally, specific comparison logic and handling of bespoke evaluation parameters is done in the custom <a href="#the-evaluation_function"><strong>evaluation_function</strong></a>, unique to each deployed instance. This is the logic that differenciates each function (comparing numbers, matrices, images, equations, graphs, text, tables, etc ...).</p>
+<h2 id="commands">Commands</h2>
+<p>Commands are handled by the <a href="#base-layer">base layer</a>. They define a unified interface for interacting with all deployed evaluation functions on the web. Practically, these are specified in the "command" request header.</p>
+<p>!!! example
+To execute the <code>docs-user</code> command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available:</p>
+<pre><code>```bash
+curl --request GET \
+--url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
+--header 'command: docs-user'
+```
+</code></pre>
+<h3 id="eval"><code>eval</code></h3>
+<p>This is the default command, used to compare a student's <code>response</code> and correct <code>answer</code>, given certain <code>params</code>. Outputs for this command depend on the success of the execution of the user-defined <a href="#the-evaluation_function"><code>evaluation_function</code></a>. If an error was thrown during execution, it is caught by the main handler and an error block is returned - otherwise, successful execution outputs are supplied under a <code>result</code> field.</p>
+<p>!!! success "Output Structure: Successful evaluation"</p>
+<pre><code>``` { .python .annotate }
+{
+    "command": "eval",
+    "result": {
+        "is_correct": "&lt;bool&gt;",
+
+        # Optional fields added by feedback generation (1)
+        "feedback": "&lt;string&gt;",
+        "warnings": "&lt;array&gt;"
+
+        # This output can also contain any number of fields given by `evaluation_function`
+    }
+}
+```
+
+1. See the [Feedback Page](feedback.md) for more information
+</code></pre>
+<p>!!! fail "Output Structure: Error thrown during Execution"</p>
+<pre><code>``` { .python .annotate }
+{
+    "command": "eval",
+    "error": {
+        "message": "&lt;string&gt;", # Always present
+
+        # This object can contain other number of additional fields
+        # passed through by the EvaluationException (1) for debugging e.g.:
+        "serialization_errors": [],
+        "culprit": "user",
+        "detail": "..."
+    }
+}
+```
+
+1.    This is a custom error class from the [evaluation-function-utils](module.md) package, which developers are encouraged to use in order to output richer errors. See the [Error handling](#error-handling) section for more information.
+</code></pre>
+<h3 id="preview"><code>preview</code></h3>
+<p>This command is similar to <code>eval</code>, except it doesn't return whether an answer is correct or provide feedback. Instead, <code>preview</code> provides a way for students view their response after some pre-processing, e.g. as rendered LaTeX when using Sympy for symbolic algebra.</p>
+<p>This should be faster to compute than <code>eval</code>, allowing students to get live preview of their response.</p>
+<h3 id="healthcheck"><code>healthcheck</code></h3>
+<p>This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.</p>
+<h3 id="docs-user"><code>docs-user</code></h3>
+<p>Command returns the <code>docs/user.md</code> file (base64 encoded)</p>
+<h3 id="docs-dev"><code>docs-dev</code></h3>
+<p>Command returns the <code>docs/dev.md</code> file (base64 encoded)</p>
+<h2 id="base-layer">Base Layer</h2>
+<h2 id="file-structure">File Structure</h2>
+<p>A standard evaluation function repository based on the provided <a href="https://github.com/lambda-feedback/Evaluation-Function-Boilerplate">boilerplate</a> will have the following file structure:</p>
+<pre><code class="language-bash">app/
+    __init__.py
+    evaluation.py # Script containing the main evaluation_function
+    evaluation_tests.py # Unittests for the main evaluation_function
+    requirements.txt # list of packages needed for algorithm.py
+    Dockerfile # for building whole image to deploy to AWS
+
+    docs/ # Documentation pages for this function (required)
+        dev.md # Developer-oriented documentation
+        user.md # LambdaFeedback content author documentation
+
+.github/
+    workflows/
+        test-and-deploy.yml # Testing and deployment pipeline
+
+config.json # Specify the name of the evaluation function in this file
+README.md
+.gitignore
+</code></pre>
+<p>!!! warning</p>
+<pre><code>If you want to split up function logic into different files, these must be added to the `Dockerfile`. This is so they are packaged with the built image when deployed. For example, if `evaluation.py` imports functionality from an `app/utils.py` file, then the following line must be added:
+
+```dockerfile linenums="9" hl_lines="7 8"
+RUN pip3 install -r requirements.txt
+
+# Copy the evaluation and testing scripts
+COPY evaluation.py ./app/
+COPY evaluation_tests.py ./app/
+
+# Copy additional files
+COPY utils.py ./app/
+
+# Copy Documentation
+COPY docs/dev.md ./app/docs/dev.md
+```
+</code></pre>
+<h2 id="evaluationpy"><code>evaluation.py</code></h2>
+<p>The entire framework, validation and testing developed around evaluation functions is ultimately used to get to this file, or the <code>evaluation_function</code> function within it, to be more precise.</p>
+<h3 id="the-evaluation_function">The <code>evaluation_function</code></h3>
+<h4 id="inputs">Inputs</h4>
+<p>All evaluation functions are passed three arguments:</p>
+<ul>
+<li><code>response</code>: Data input by the user</li>
+<li><code>answer</code>: Data to compare user input to (could be from a DB of answers, or pre-generated by other functions)</li>
+<li><code>params</code>: Parameters which affect the comparison process (replacements, tolerances, feedbacks, ...)</li>
+</ul>
+<p>For evaluation functions that use Sympy or LaTeX for mathematical expressions, it's not always possible for a student to type the correct symbols. Instead we need to use simpler symbols. For example, $\overline{U_{ij}}$ cannot be written using standard sympy syntax, and therefore has to be substituted for something else, such as <code>"u"</code> or <code>"U"</code>.</p>
+<p>Therefore, evaluation functions using mathematical expressions should be able to handle multiple symbols to represent the same variable. To achieve this, every evaluation function is passed a <code>symbols</code> entry in <code>params</code>, to allow functions to convert a student's response:</p>
+<pre><code class="language-json">{
+    &quot;response&quot;: &quot;user input&quot;,
+    &quot;answer&quot;: &quot;model response to compare against&quot;,
+    &quot;params&quot;: {
+        &quot;symbols&quot;: {...},
+        ... # params set by the teacher
+    }
+}
+</code></pre>
+<p><code>symbols</code> is a dictionary, where each key represents the <strong>main</strong> Sympy symbol (known as the <code>code</code>), and has two entries:</p>
+<ul>
+<li><code>latex</code>: the string used for rendering the symbol in LaTeX</li>
+<li><code>aliases</code>: a list of alternative Sympy symbols that can be used by the student to represent the <code>code</code>.</li>
+</ul>
+<p>For the example above with $\overline{U_{ij}}$, <code>symbols</code> would have the form:</p>
+<pre><code class="language-json">{
+    ...
+    &quot;params&quot;: {
+        &quot;symbols&quot;: {
+            &quot;u&quot;: {
+                &quot;latex&quot;: &quot;\\overline{U_{ij}}&quot;,
+                &quot;aliases&quot;: [&quot;U&quot;]
+            }
+        }
+    }
+}
+</code></pre>
+<p>Note that in JSON, special characters need to be escaped, so the latex symbol above will have a double-backslash instead.</p>
+<p>Currently, the backend only supports one LaTeX symbol for multiple Sympy symbols. In future, this will be a many-to-many relationship.</p>
+<h4 id="context">Context</h4>
+<p>When a student submits a response to a response area the number of previously submitted responses submitted to the same response area byt the same student will be sent to the evaluation function. The following format is used:</p>
+<pre class="annotate"><code class="language-python">    {
+        &quot;submission_context&quot;: {
+            &quot;submissions_per_student_per_response_area&quot;: # non-negative integer that represent the nubmer of previously processed responses
+        }
+    }
+</code></pre>
+<h4 id="outputs">Outputs</h4>
+<p>The function should output a single JSON-encodable dictionary. Although a large amount of freedom is given to what this dict contains, when utilising the function alongside the <a href="https://lambdafeedback.com/">lambdafeedback</a> web app, a few values are expected/able to be consumed:</p>
+<p><strong><code>is_correct: &lt;bool&gt;</code></strong>: Boolean parameter indicate whether the comparison between <code>response</code> and <code>answer</code> was deemed correct under the parameters. This field is then used by the web app to provide the most simple feedback to the user (green/red).</p>
+<p>!!! info
+<em>More standardised function outputs that the frontend can consume are to come</em></p>
+<h3 id="error-handling">Error Handling</h3>
+<p>Error reporting should follow a specific approach for all evaluation functions. <strong>If the <code>evaluation_function</code> you've written doesn't throw any errors, then it's output is returned under the <code>result</code> field - and assumed to have worked properly</strong>. This means that if you catch an error in your code manually, and simply return it - the frontend will assume everything went fine. Instead, errors can be handled in two ways:</p>
+<p><strong>Letting <code>evaluation_function</code> fail</strong>: On the request handler in the <a href="#base-layer">Base Layer</a>, the call to evaluation_function is wrapped in a try/except which catches any exception. This causes the evaluation to stop completely, returning a standard message, and a repr of the exception thrown in the <code>error.detail</code> field.</p>
+<p><strong>Custom errors</strong>: If you want to report more detailed errors from your function, use the <code>EvaluationException</code> class provided in the <a href="../module/#errors">evaluation-function-utils</a> package. These are caught before all other standard exceptions, and are dealt with in a different way. These provide a way for your function to throw errors and stop executing safely, while supplying more accurate feedback to the front-end.</p>
+<p>!!! Example
+It is discouraged to do the following in the evaluation code:
+<code>python
+    if something.bad.happened():
+        return {
+            "error": {
+                "message": "Some important message",
+                "other": "details",
+            }
+        }</code></p>
+<pre><code>As this causes the actual function output (by the AWS lambda function) to be:
+```json
+{
+    "command": "eval",
+    "result": {
+        "error": {
+            "message": "Some important message",
+            "other": "details"
+        }
+    }
+}
+```
+
+Instead, use custom exceptions from the [evaluation-function-utils](module.md#errors) package.
+```python
+if something.bad.happened():
+    raise EvaluationException(message="Some important message", other='details')
+```
+
+As the actual function output will look like:
+```json
+{
+    "command": "eval",
+    "error": {
+        "message": "Some important message",
+        "other": "details"
+    }
+}
+```
+
+This immediately indicates to the frontend client that something has gone wrong, allowing for proper feedback to be displayed.
+</code></pre>
+<h2 id="evaluation_testspy"><code>evaluation_tests.py</code></h2>
+<p>This file is intended to contain unit tests for the <code>evaluation_function</code>. Python's built-in
+<a href="https://docs.python.org/3/library/unittest.html"><code>unittest</code></a> framework is used.
+These tests are run by Github Actions whenever changes are pushed to the main branch, and
+the evaluation function is not deployed unless all the tests pass.</p>
+<p>!!! Example
+A minimal example of a test:</p>
+<pre><code class="language-python">import unittest
+from .evaluation import evaluation_function
+
+# Tests are functions beginning with &quot;test_&quot; in 
+# a class that inherits from unittest.TestCase
+class TestEvaluationFunction(unittest.TestCase):
+    def test_trivial(self):
+        result = evaluation_function(&quot;a + b&quot;, &quot;a + b&quot;, {})
+        self.assertTrue(result[&quot;is_correct&quot;])
+</code></pre>
+<p>Tests can be run locally using </p>
+<pre><code class="language-bash">$ python -m unittest app.evaluation_tests
+</code></pre>
+<h3 id="autotests">Autotests</h3>
+<p>For writing simple tests, it may be easier to write the tests in a config file and have them
+run on the evaluation function automatically. This can be achieved using the autotests library,
+which can easily be integrated into an existing project by adding a decorator to the test class.
+See the autotests <a href="https://github.com/lambda-feedback/evaluation-function-auto-tests">README</a>
+for more information.</p>
+<p>Another benefit of this approach is that the tool that collects evaluation function documentation
+(<a href="https://github.com/lambda-feedback/EvalDocsLoader">EvalDocsLoader</a>) can read this file and
+auto-generate examples of correct and incorrect responses. This can help new users understand
+the capabilities of your evaluation function.</p>
+<p>For an example of how this looks, see the user docs for <a href="https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/#examples-from-integration-tests">compareBoolean</a>.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Evaluation function documentation is stored in two files, which contain documentation for
+developers and users respectively. These files are fetched by 
+<a href="https://github.com/lambda-feedback/EvalDocsLoader">EvalDocsLoader</a>, which integrates them
+into this documentation site. </p>
+<p>In order for EvalDocsLoader to find your docs, your evaluation function must:</p>
+<ol>
+<li>be deployed to the production site;</li>
+<li>belong to the lambda-feedback organisation on Github;</li>
+<li>have a <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics">topic</a> called <code>evaluation-function</code>.</li>
+</ol>
+<p>Once these requirements are met, the docs you write should appear on the documentation site.</p>
+<h3 id="docsdevmd"><code>docs/dev.md</code></h3>
+<p>This should contain documentation that would be useful for new developers working on your function.</p>
+<h3 id="docsusermd"><code>docs/user.md</code></h3>
+<p>This should contain information for non-technical users, such as an overview of capabilities,
+examples, and a description of parameters.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../scripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

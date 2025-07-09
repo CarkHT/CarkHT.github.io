@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/advanced/evaluation_functions/quickstart/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Quickstart Guide - Lambda Feedback Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Lambda Feedback Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../.." class="dropdown-item">Welcome to Lambda Feedback!</a>
+</li>
+                                    
+<li>
+    <a href="../../../publications/" class="dropdown-item">Publications</a>
+</li>
+                                    
+<li>
+    <a href="../../../opportunities/" class="dropdown-item">Opportunities</a>
+</li>
+                                    
+<li>
+    <a href="../../../terminology/" class="dropdown-item">Terminology</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/major_releases/" class="dropdown-item">Major releases</a>
+</li>
+            
+<li>
+    <a href="../../../releases/detailed_releases/" class="dropdown-item">Detailed Releases</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Previous releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/relases_2023_24/" class="dropdown-item">2023-24</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../releases/status/" class="dropdown-item">Status</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Students</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../student/" class="dropdown-item">Student/User Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/getting_started_student/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/answering_questions/" class="dropdown-item">Answering Questions</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/response_areas/" class="dropdown-item">Response Areas</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/lexdown_student/" class="dropdown-item">Text Editing</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Teachers</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../teacher/" class="dropdown-item">Teacher and Content-author Documentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guides</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/guides/gettingstarted/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/content-sets-questions/" class="dropdown-item">Editing questions</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/question-export-import/" class="dropdown-item">Exporting and importing questions</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/lexdown/" class="dropdown-item">Milkdown</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/analytics/" class="dropdown-item">Analytics</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/good-practice/" class="dropdown-item">Good practice</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/guides/faq/" class="dropdown-item">FAQ</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guidance</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/guides/guidance/guidance-time-suggestion/" class="dropdown-item">Guidance Time Suggestion</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Reference</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/access_control/" class="dropdown-item">Access control</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/latex_functionality/" class="dropdown-item">Latex functionality</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/pdf_generation/" class="dropdown-item">PDF generation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/" class="dropdown-item">Response Area Components</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Text/" class="dropdown-item">Text</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Number/" class="dropdown-item">Number</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Boolean/" class="dropdown-item">Boolean</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/NumericUnits/" class="dropdown-item">NumericUnits</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Expression/" class="dropdown-item">Expression</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/MultipleChoice/" class="dropdown-item">MultipleChoice</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Matrix/" class="dropdown-item">Matrix</a>
+</li>
+            
+<li>
+    <a href="../../../teacher/reference/response_area_components/Table/" class="dropdown-item">Table</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../teacher/reference/evaluation_functions/" class="dropdown-item">Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Advanced</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Advanced users</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../response_areas/overview/" class="dropdown-item">Overview</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Quickstart Guide</a>
+</li>
+            
+<li>
+    <a href="../specification/" class="dropdown-item">General Specification</a>
+</li>
+            
+<li>
+    <a href="../feedback/" class="dropdown-item">Feedback</a>
+</li>
+            
+<li>
+    <a href="../local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+            
+<li>
+    <a href="../module/" class="dropdown-item">Evaluation Function Utils</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployed Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Deployed Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../alternate_languages/" class="dropdown-item">Alternate Function Languages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Chat functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../chat_functions/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+            
+<li>
+    <a href="../../chat_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../response_areas/overview/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../specification/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lambda-feedback/user-documentation/blob/main/docs/advanced/evaluation_functions/quickstart.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#developing-evaluation-functions-getting-started" class="nav-link">Developing Evaluation Functions: Getting Started</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-an-evaluation-function" class="nav-link">What is an Evaluation Function?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#getting-setup-for-development" class="nav-link">Getting Setup for Development</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#more-info" class="nav-link">More Info</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="developing-evaluation-functions-getting-started">Developing Evaluation Functions: Getting Started</h1>
+<h2 id="what-is-an-evaluation-function">What is an Evaluation Function?</h2>
+<p>It's a cloud function which performs some computation given some user input (the <em>response</em>), a problem-specific source of truth (the <em>answer</em>), and some optional parameters (<em>params</em>). Evaluation functions capture and automate the role of a teacher who has to keep marking the same question countless times. The simplest example for this would be one which checks for exact equivalence - where the function signals a <em>response</em> is correct only if it is identical to the <em>answer</em>. However, more complex and exotic ones such as symbolic expression equivalence and parsing of physical units can be imagined. </p>
+<h2 id="getting-setup-for-development">Getting Setup for Development</h2>
+<ol>
+<li>Get the code on your local machine (Using github desktop or the <code>git</code> cli)<ul>
+<li>For new functions: create and clone a new repository using the <a href="https://github.com/lambda-feedback/Evaluation-Function-Boilerplate">boilerplate template</a>. <strong>Make sure the new repository is set to public (it needs access to organisation secrets)</strong>.</li>
+<li>For existing functions: please make your changes on a new separate branch </li>
+</ul>
+</li>
+<li><em>If you are creating a new function</em>, you'll need to set it's name (as it will be deployed) in the <code>config.json</code> file, available in the root directory.<ul>
+<li>The name must be unique. To view existing grading functions, go to:<ul>
+<li><a href="https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=c1o0u8se7b&amp;region=eu-west-2&amp;routes=0xsoy4q">Staging API Gateway Integrations</a></li>
+<li><a href="https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=cttolq2oph&amp;integration=qpbgva8&amp;region=eu-west-2&amp;routes=0xsoy4q">Production API Gateway Integrations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>You are now ready to start making changes and implementing features by editing each of the three main function-logic files:</p>
+<ol>
+<li>
+<p><strong><code>app/evaluation.py</code></strong>: This file contains the main <code>evaluation_function</code> function, which ultimately gets called to compare a <em>response</em> to an <em>answer</em>. </p>
+<p><a href="../specification/#evaluationpy"><code>evaluation.py</code> Specification</a>{ .md-button }</p>
+</li>
+<li>
+<p><strong><code>app/evaluation_tests.py</code></strong>: This is where you can test the logic in <code>evaluation.py</code>, following the standard <code>unittest</code> format. </p>
+<p><a href="../specification/#evaluation_testspy"><code>evaluation_tests.py</code> Specification</a>{ .md-button }</p>
+</li>
+<li>
+<p>Documentation files:</p>
+<ul>
+<li>
+<p><strong><code>app/docs/dev.md</code></strong>: This file should be edited to reflect any changes/features implemented, following a developer perspective. It is baked into the function's image to be pulled by this documentation website under the <a href="../">deployed functions</a> section.</p>
+</li>
+<li>
+<p><strong><code>app/docs/user.md</code></strong>: This file documents how the function can be used by a teacher user, from the perspective of editing content on the <a href="{{ urls.client }}">LambdaFeedback</a> platform. This time, files are collated and displayed in the <a href="../../../teacher/">Teacher</a> section.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Changes can be tested locally by running the tests you've written using:</p>
+</li>
+</ol>
+<pre><code class="language-bash">python -m unittest app/evaluation_tests.py
+</code></pre>
+<p><a href="../local/">Running and Testing Functions Locally</a>{ .md-button }</p>
+<ol>
+<li>
+<p>Merge commits into the default branch will trigger the <code>test-and-deploy.yml</code> workflow, which will build the docker image, push it to a shared ECR repository, then call the backend <code>grading-function/ensure</code> route to build the necessary infrastructure to make the function available from the client app.</p>
+</li>
+<li>
+<p>You can now test the deployed evaluation function using your prefered request client (such as <a href="https://insomnia.rest/">Insomnia</a> or <a href="https://www.postman.com/">Postman</a> or simply <code>curl</code> from a terminal). Functions are made available at:
+    <code>url
+    https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/&lt;function name as defined in config.json&gt;</code></p>
+<p>!!! example "Example Request to SymbolicEqual"
+        <code>curl --request GET \
+            --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual \
+            --header 'Content-Type: application/json' \
+            --header 'command: eval' \
+            --data '{"response": "x + x", "answer": "2*x"}'</code></p>
+</li>
+<li>
+<p>In order to make your new function available on the LambdaFeedback platform, you have to register it via the <a href="{{ urls.client }}admin/functions">Admin Panel</a>. This is done by supplying its name, url (the same as the one above) and supported response types. </p>
+</li>
+</ol>
+<h2 id="more-info">More Info</h2>
+<ul>
+<li>
+<p><a href="../specification/">General Function Specification and Behaviour</a></p>
+<ul>
+<li>Function philosophy including deployment strategy</li>
+<li>Request/Response schemas and communication spec </li>
+<li>Base layer logic, properties and behaviour</li>
+</ul>
+</li>
+<li>
+<p><a href="../module/">EvaluationFunctionUtils</a> (python package)</p>
+<ul>
+<li>Error Reporting </li>
+<li>Schema validation</li>
+<li>Local testing</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../scripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

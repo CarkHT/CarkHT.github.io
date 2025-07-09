@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/teacher/guides/good-practice/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Good practice - Lambda Feedback Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Lambda Feedback Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../.." class="dropdown-item">Welcome to Lambda Feedback!</a>
+</li>
+                                    
+<li>
+    <a href="../../../publications/" class="dropdown-item">Publications</a>
+</li>
+                                    
+<li>
+    <a href="../../../opportunities/" class="dropdown-item">Opportunities</a>
+</li>
+                                    
+<li>
+    <a href="../../../terminology/" class="dropdown-item">Terminology</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/major_releases/" class="dropdown-item">Major releases</a>
+</li>
+            
+<li>
+    <a href="../../../releases/detailed_releases/" class="dropdown-item">Detailed Releases</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Previous releases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../releases/relases_2023_24/" class="dropdown-item">2023-24</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../releases/status/" class="dropdown-item">Status</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Students</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../student/" class="dropdown-item">Student/User Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/getting_started_student/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/answering_questions/" class="dropdown-item">Answering Questions</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/response_areas/" class="dropdown-item">Response Areas</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/lexdown_student/" class="dropdown-item">Text Editing</a>
+</li>
+                                    
+<li>
+    <a href="../../../student/faq/" class="dropdown-item">FAQ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Teachers</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Teacher and Content-author Documentation</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guides</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../gettingstarted/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../content-sets-questions/" class="dropdown-item">Editing questions</a>
+</li>
+            
+<li>
+    <a href="../question-export-import/" class="dropdown-item">Exporting and importing questions</a>
+</li>
+            
+<li>
+    <a href="../lexdown/" class="dropdown-item">Milkdown</a>
+</li>
+            
+<li>
+    <a href="../analytics/" class="dropdown-item">Analytics</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Good practice</a>
+</li>
+            
+<li>
+    <a href="../faq/" class="dropdown-item">FAQ</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guidance</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../guidance/guidance-time-suggestion/" class="dropdown-item">Guidance Time Suggestion</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Reference</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../reference/access_control/" class="dropdown-item">Access control</a>
+</li>
+            
+<li>
+    <a href="../../reference/latex_functionality/" class="dropdown-item">Latex functionality</a>
+</li>
+            
+<li>
+    <a href="../../reference/pdf_generation/" class="dropdown-item">PDF generation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../reference/response_area_components/" class="dropdown-item">Response Area Components</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Text/" class="dropdown-item">Text</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Number/" class="dropdown-item">Number</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Boolean/" class="dropdown-item">Boolean</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/NumericUnits/" class="dropdown-item">NumericUnits</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Expression/" class="dropdown-item">Expression</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/MultipleChoice/" class="dropdown-item">MultipleChoice</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Matrix/" class="dropdown-item">Matrix</a>
+</li>
+            
+<li>
+    <a href="../../reference/response_area_components/Table/" class="dropdown-item">Table</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../reference/evaluation_functions/" class="dropdown-item">Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Advanced</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../advanced/" class="dropdown-item">Advanced users</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Response Areas</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/response_areas/overview/" class="dropdown-item">Overview</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/quickstart/" class="dropdown-item">Quickstart Guide</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/specification/" class="dropdown-item">General Specification</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/feedback/" class="dropdown-item">Feedback</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/module/" class="dropdown-item">Evaluation Function Utils</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Deployed Functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/" class="dropdown-item">Deployed Evaluation Functions</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../advanced/evaluation_functions/alternate_languages/" class="dropdown-item">Alternate Function Languages</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Chat functions</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../advanced/chat_functions/quickstart/" class="dropdown-item">Quickstart</a>
+</li>
+            
+<li>
+    <a href="../../../advanced/chat_functions/local/" class="dropdown-item">Testing Functions Locally</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../analytics/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../faq/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lambda-feedback/user-documentation/blob/main/docs/teacher/guides/good-practice.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#good-practice" class="nav-link">Good practice</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#romanised-operators" class="nav-link">Romanised operators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-empty-lines" class="nav-link">Use empty lines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#space-between-numbers-and-units" class="nav-link">Space between numbers and units</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#romanise-units-and-check-their-case" class="nav-link">Romanise units and check their case</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#add-tests-to-response-areas" class="nav-link">Add tests to response areas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#save-and-publish-as-you-go" class="nav-link">Save and publish as you go</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-branching-when-relevant" class="nav-link">Use branching when relevant</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-pre-response-area-text-to-be-clear-what-should-be-entered" class="nav-link">Use pre-response area text to be clear what should be entered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-dfrac-for-bigger-fractions-when-needed" class="nav-link">Use \dfrac for bigger fractions when needed.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-small-when-smaller-fonts-or-fractions-are-needed" class="nav-link">Use \small when smaller fonts or fractions are needed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-audio-clips" class="nav-link">Use audio clips</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#issue-with-input-symbols" class="nav-link">Issue with input symbols</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#use-live-preview-and-permit-all-types-of-input" class="nav-link">Use live preview and permit all types of input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#latex-help" class="nav-link">Latex help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="good-practice">Good practice</h1>
+<h2 id="romanised-operators">Romanised operators</h2>
+<p>Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{d}x}$ instead of $sin$, $\frac{d}{dx}$, etc.</p>
+<h2 id="use-empty-lines">Use empty lines</h2>
+<p>Using empty lines can improve the readability and neatness of your content. Empty lines are often useful before and after an equation, and between paragraphs of text. An empty line in markdown requires <em>two spaces</em> on the line, otherwise the line is ignored.</p>
+<h2 id="space-between-numbers-and-units">Space between numbers and units</h2>
+<p>Put appropriate space between a number and its unit, such as <code>5 m</code> or <code>3 kg</code>, according to the SI conventions.</p>
+<h2 id="romanise-units-and-check-their-case">Romanise units and check their case</h2>
+<p>Use romanised units such as $\text{m}$, $\text{kN}$ instead of $m$, $kN$. Ensure that the case of the unit is correct.</p>
+<h2 id="add-tests-to-response-areas">Add tests to response areas</h2>
+<p>In a response area, press <code>configure</code> then <code>tests</code>.</p>
+<p>Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.</p>
+<h2 id="save-and-publish-as-you-go">Save and publish as you go</h2>
+<p>Saving and publishing work regularly is recommended to prevent accidental data loss.</p>
+<h2 id="use-branching-when-relevant">Use branching when relevant</h2>
+<p>Branching is a feature for <code>worked solutions</code>. It allows you to have different solution pathways Usage examples:</p>
+<ul>
+<li>When a question can be solved via multiple different methods, branching can be used for each method.</li>
+<li>When a question has multiple parts, where each part involves substitution of different values, branching can be used for each part.</li>
+</ul>
+<p><img alt="gif showing the branching feature" src="../images/branching.gif" /></p>
+<h2 id="use-pre-response-area-text-to-be-clear-what-should-be-entered">Use pre-response area text to be clear what should be entered</h2>
+<p>Pre-response area text is found under <code>configure</code> - <code>INPUT</code> in the evaluation function.</p>
+<p>You can use LaTeX in the pre-response area text.</p>
+<p><img alt="Image showing a pre-response area" src="../images/pre_response_area.png" /></p>
+<h2 id="use-dfrac-for-bigger-fractions-when-needed">Use <code>\dfrac</code> for bigger fractions when needed.</h2>
+<p>Use <code>$\dfrac{numerator}{denominator}$</code> for bigger fractions when you need to display them more clearly or emphasize them. For example, <code>$\dfrac{3}{4}$</code> will produce a bigger fraction than <code>$\frac{3}{4}$</code>.
+Alternatively, you can use <code>$\displaystyle$</code> at the start of an inline equation to render everything afterwards full-size (as in display maths mode), this is especially helpful for integrals.</p>
+<h2 id="use-small-when-smaller-fonts-or-fractions-are-needed">Use <code>\small</code> when smaller fonts or fractions are needed</h2>
+<p>Use <code>$\small{text}$</code> when you need to display smaller fonts or fractions in your LaTeX expressions. For example, <code>$\small{\frac{1}{2}}$</code> will produce a smaller fraction than <code>$\frac{1}{2}$</code>.</p>
+<h2 id="use-audio-clips">Use audio clips</h2>
+<p>Just drag + drop an audio file into the milkdown editor.</p>
+<h2 id="issue-with-input-symbols">Issue with input symbols</h2>
+<p>For the <code>code</code> of input symbols in the response areas, the system cannot accept brackets (i.e <code>dot(x)</code> for $\dot{x}$) and response must be formatted in different ways (i.e <code>dot_x</code>). </p>
+<p><code>a_b</code> will render as $a_b$ without adding an input symbol, but note that <code>dot_x</code> overrides the <code>_</code> input (in this example, will render as $\dot{x}$ instead of $dot_x$)</p>
+<h2 id="use-live-preview-and-permit-all-types-of-input">Use live preview and permit all types of input</h2>
+<p>Live preview and input types are found in an evaluation function under <code>configure</code> - <code>INPUT</code>.</p>
+<p>Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.</p>
+<p><img alt="Image showing a live-preview to a student's response" src="../images/live_preview.png" /></p>
+<h2 id="latex-help">Latex help</h2>
+<ol>
+<li>Use <code>\begin{array}</code> to generate a compact table i.e. </li>
+</ol>
+<p><code>\begin{array}{|c|c|}
+  \hline
+  \theta_{2,0} &amp; \theta_{1,L}\\
+  \hline
+  -6700 &amp; 130.5641\\
+  \hline
+  -6600 &amp; 161.6086\\
+  \hline
+  \end{array}</code></p>
+<p><img alt="Image showing a example of a table" src="../images/table.png" /></p>
+<ol>
+<li>Use <code>\begin{aligned}</code> to keep your working formatted nicely</li>
+</ol>
+<pre><code>\begin{aligned}
+M_{d e f} &amp;=\dfrac{1}{2}(M+M^T)\\
+&amp; =\dfrac{1}{2} \begin{pmatrix} 4 &amp; 14\\ -6 &amp; -11 \end{pmatrix}+\begin{pmatrix} 4 &amp; -6\\ 14 &amp; -11 \end{pmatrix}\\
+&amp; =\begin{pmatrix} 4 &amp; 4\\ 4 &amp; -11 \end{pmatrix}
+\end{aligned}
+</code></pre>
+<p><img alt="Image showing a example of a algined working" src="../images/aligned.png" /></p>
+<ol>
+<li>Use <code>\left</code> and <code>\right</code> for equations with multiple brackets</li>
+</ol>
+<pre><code>f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
+</code></pre>
+<p><img alt="Image showing a example of a brackets" src="../images/bracket.png" /></p>
+<p>This also works for <code>[ ]</code> and <code>\{ \}</code></p>
+<ol>
+<li>Use <code>\sin</code>, <code>\cos</code>, etc. as a shortcut for <code>\text{sin }</code>, <code>\text{cos }</code>, etc.</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../scripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
