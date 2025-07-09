@@ -77,78 +77,13 @@ nav:
           - Quickstart: "advanced/chat_functions/quickstart.md"
           - Testing Functions Locally: "advanced/chat_functions/local.md"
 
-# Configuration
-theme:
-  name: material
-  logo: assets/logo.png
-  favicon: assets/favicon.png
-  icon:
-    repo: fontawesome/brands/github
-    edit: fontawesome/solid/pen-to-square
-  features:
-    - navigation.indexes
-    - navigation.instant
-    - navigation.sections
-    #- navigation.top
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - content.action.edit
-    - content.code.copy
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
 
-# Extensions
-markdown_extensions:
-  - toc:
-      permalink: true
-  - admonition
-  - def_list
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.arithmatex:
-      generic: true
-  - attr_list
-  - md_in_html
-  # - meta
-  - tables
 
 extra_javascript:
   - scripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# Plugins
-plugins:
-  - search
-  - git-revision-date-localized:
-      fallback_to_build_date: true
-  - macros
-  - evaldocsloader:
-      enabled: !ENV [ENABLE_EVALDOCS, true]
-      functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-      api_key:
-        !ENV [
-          API_KEY,
-          "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
-        ]
-      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
-      user_section: ["Teachers", "Reference", "Evaluation Functions"]
-      github_token: !ENV [GITHUB_TOKEN, ""]
 
 # Extra variables, accessible within markdown pages
 extra:
