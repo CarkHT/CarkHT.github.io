@@ -47,16 +47,17 @@ Each stage is in a separate tab. Teachers are recommended to be mindful of this 
 ![Screenshot](screenshots/Inputfield.png)
 
 - Select an input style for the student by scrolling or filtering. These consist of the following:
-  - Matrix
-  - Number
-  - Boolean (True/false)
-  - Text (Suitable for short text answers)
-  - Table
-  - Multiple-choice
-  - Expression (Gives a preview for the typed symbolic expression)
-  - Numeric units (Two fields, allowing for units to be assessed)
-  - Code
-  - Essay (Suitable for long text answers)
+    - Matrix
+    - Number
+    - Boolean (True/false)
+    - Text (Suitable for short text answers)
+    - Table
+    - Multiple-choice
+    - Expression (Gives a preview for the typed symbolic expression)
+    - Numeric units (Two fields, allowing for units to be assessed)
+    - Code
+    - Essay (Suitable for long text answers)
+
 - Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to number, as this supports isSimilar, while assessing an equation is best suited to the expression foeld, as this supports compareExpressions.
 - Each input field may be configured with a series of options:
   - Enable live preview. Default TRUE for the EXPRESSION input type, to validate student input before submitting for feedback.
