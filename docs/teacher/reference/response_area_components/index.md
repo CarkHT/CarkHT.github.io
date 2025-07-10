@@ -72,8 +72,8 @@ Each stage is in a separate tab. Teachers are recommended to be mindful of this 
 - EVALUATE: configure how student expressions are evaluated. This is a 'no code' parametric configuration. Settings will be upgraded as the system improves.
 
     - [Evaluation Function](https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/) - select an evaluation function from the list. For example:
-      - isSimilar will perform a basic numerical comparison between the reference answer and         student input, with a configurable level of absolute and relative uncertainty.
-      - compareExpressions is typically used where a symbolic answer is requested.
+        - isSimilar will perform a basic numerical comparison between the reference answer and         student input, with a configurable level of absolute and relative uncertainty.
+        - compareExpressions is typically used where a symbolic answer is requested.
     - Parameters - configure as provided, and add new parameters as required. Details depend on the Evaluation Function.
     - Input symbols - define a dictionary of symbols and their equivalent in code form. This essentially associates a LaTeX-rendered symbol with a machine-readable variable label, with the LaTeX render returned to the student through the preview. These symbols may also be hiddent to students. All inputs are plain text. For example, the symbol `$f(x)$` may have code `fx` and alternatives `f_x`, `f(x)`, `f`. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. This allow teachers to accept several alternative symbols, such as those with different cases or conventional expressions. The configuration of input symbols is a very important part of providing high quality feedback. Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden to the student but visible to the evaluation function.
 
