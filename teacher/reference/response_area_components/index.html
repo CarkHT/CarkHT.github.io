@@ -369,84 +369,101 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="response-area-components">Response Area Components</h1>
-<p>These are what the user interacts with on the front-end. They check an input given by the student, and provide feedback. As React components, they admit a certain number of parameters which are described in this section.</p>
+<p>Response Areas are the interactive elements your students will use to submit their answers. They check an input given by the student, and provide feedback. As React components, they admit a certain number of parameters which are described in this section.</p>
 <p><img alt="Screenshot" src="screenshots/Responsearea.png" /></p>
 <h2 id="response-area-creation">Response Area creation</h2>
 <p>Response areas are added to the question field, and are configured for each question in the set.</p>
 <h3 id="add-response-area">Add Response Area</h3>
-<p>The user can add any number of response areas to a question part. These may be separated by text fields. If desired, adding a double space in the field will space out response areas.</p>
+<p>You can add any number of response areas to a question part. These may be separated by text fields. If desired, adding a double space in the field will space out response areas.</p>
 <h3 id="duplicate">Duplicate</h3>
-<p>The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, data entered in the teacher edit mode is copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) is not copied.</p>
-<h3 id="reorder">Reorder</h3>
-<p>It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way a reordering of parts:</p>
-<p>Move your mouse cursor over the response are you want to move. Then, press and hold down the left mouse button, move the object to the location you desire, and release the mouse button to set it down.</p>
-<h3 id="delete-response-area">Delete Response Area</h3>
-<p>The user can delete a response area without any restrictions. A popup message appears to confirm the deletion.</p>
-<p>However, it is important to remember that there might be submissions against the response area you are trying to delete. If this is the case, the popup message will contain the relevant information.</p>
-<p>See more information about analytics against deleted response areas in <a href="../../guides/analytics">Analytics</a></p>
-<h2 id="response-area-configuration">Response Area configuration</h2>
-<p>The user can configure a response area using the configure button:
-<img alt="conifgure button" src="../images/configure.png" />
-which opens the 'Response Area Panel'. The panel follows a workflow designed around the way a teacher thinks:</p>
+<p>You can duplicate the response area within the same part by clicking on the duplicate icon.</p>
 <ul>
-<li>Input</li>
-<li>Evaluation</li>
-<li>Feedback</li>
-<li>Tests</li>
+<li><strong>What gets copied:</strong> All teacher-configured settings are duplicated. This includes the input type, evaluation function, pre/post text, the correct answer, tests, and any feedback cases you've set up.</li>
+<li><strong>What is NOT copied:</strong> Any data generated during use is not carried over. This includes comments, flags, likes, and student submissions.</li>
 </ul>
-<p>Each stage is in a separate tab. Teachers are recommended to be mindful of this process when creating a response area.</p>
-<h3 id="input">Input</h3>
+<h3 id="reorder">Reorder</h3>
+<p>It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way as reordering of parts.</p>
+<h3 id="delete-response-area">Delete Response Area</h3>
+<p>You can delete a response area without any restrictions. A pop-up message appears to confirm the deletion.</p>
+<p>If students have already submitted answers to the response area you are deleting, the confirmation message will warn you.</p>
+<p>See more information about analytics for deleted response areas in <a href="../../guides/analytics">Analytics</a></p>
+<h2 id="response-area-configuration">Response Area configuration</h2>
+<p>To configure a response area, click the configure button:
+<img alt="conifgure button" src="../images/configure.png" /></p>
+<p>This opens the <strong>Response Area Panel</strong>, separated into four tabs:</p>
+<ol>
+<li><strong>Input:</strong> Define what the student sees and how they answer.</li>
+<li><strong>Evaluate:</strong> Set up the logic for how the answer is checked.</li>
+<li><strong>Feedback:</strong> Create customised feedback for different correct or incorrect answers.</li>
+<li><strong>Test:</strong> Define correct and incorrect answers to test your configuration to ensure it works as expected.</li>
+</ol>
+<h3 id="1-input">1. Input</h3>
 <p><img alt="Screenshot" src="screenshots/Inputfield.png" /></p>
 <ul>
-<li>
-<p>Select an input style for the student by scrolling or filtering. These consist of the following:</p>
-<ul>
+<li>Select an input style for the student by scrolling or filtering. These consist of the following:<ul>
 <li>Matrix</li>
 <li>Number</li>
-<li>Boolean (True/false)</li>
-<li>Text (Suitable for short text answers)</li>
+<li>Boolean (true/false)</li>
+<li>Text (for short text answers)</li>
 <li>Table</li>
 <li>Multiple-choice</li>
-<li>Expression (Gives a preview for the typed symbolic expression)</li>
-<li>Numeric units (Two fields, allowing for units to be assessed)</li>
+<li>Expression (gives a preview for the typed symbolic expression)</li>
+<li>Numeric units (separate fields for a number and its units)</li>
 <li>Code</li>
-<li>Essay (Suitable for long text answers)</li>
+<li>Essay (for long text answers)</li>
+<li>Milkdown</li>
 </ul>
 </li>
-<li>
-<p>Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to number, as this supports isSimilar, while assessing an equation is best suited to the expression foeld, as this supports compareExpressions.</p>
-</li>
-<li>
-<p>Each input field may be configured with a series of options:</p>
+</ul>
+<p>Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to 'Number', as this supports isSimilar, while assessing an equation is best suited to the 'Expression' field, as this supports compareExpressions.</p>
+<p>In short, choose the most suitable input style for your desired answer.</p>
 <ul>
-<li>Enable live preview. Default TRUE for the EXPRESSION input type, to validate student input before submitting for feedback.</li>
-<li>Display input symbols. Default FALSE. When TRUE, the symbols and associated shortcut codes that may be required for a problem are displayed beneath the input field. These are configured in the 'Evaluate' tab. </li>
-<li>Include in PDF. Default FALSE except for MCQ. Only affects the PDF version. Includes pre/post response text in the PDF, with a blank space between.</li>
-<li>Pre/post response text (optional). To clarify to students what to input in the response area. Accepts plain text, including single-dollar-delimited latex. E.g. <code>Estimate $f(x)=$</code> is acceptable. When using fractions in this field, use <code>$\dfrac{}{}$</code> as this is more legible.</li>
-<li>Answer. Enter a reference answer. This will typically be the absolute solution to a problem. When requesting a symbolic answer, it must be given in terms of the chosen symbol shortcuts.  Configure the answer where relevant (e.g. number of rows and columns).</li>
-<li>Response Area Preview: for teachers to verify the configuration</li>
-</ul>
-</li>
 <li>
-<p>EVALUATE: configure how student expressions are evaluated. This is a 'no code' parametric configuration. Settings will be upgraded as the system improves.</p>
+<p><strong>Configuration Options</strong></p>
 <ul>
-<li><a href="https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/">Evaluation Function</a> - select an evaluation function from the list. For example:<ul>
-<li>isSimilar will perform a basic numerical comparison between the reference answer and         student input, with a configurable level of absolute and relative uncertainty.</li>
-<li>compareExpressions is typically used where a symbolic answer is requested.</li>
+<li><strong>Enable live preview</strong>: Renders the typed expression in realtime. Allows to validate student input before submitting. <code>Default: TRUE</code> for the EXPRESSION input type.</li>
+<li><strong>Display input symbols</strong>: Displays the symbols and associated shortcut codes that may be required for a problem beneath the input field. These are configured in the 'Evaluate' tab. <code>Default: FALSE</code>.</li>
+<li><strong>Include in PDF</strong>: Only affects the PDF version. Includes pre/post response text in the PDF, with a blank space between. <code>Default: FALSE</code> except for Multiple-choice.</li>
+<li><strong>Pre/post response text</strong> (optional): Add text before and after the response area to clarify to students what to input. Accepts plain text, and single-dollar-delimited latex. E.g. <code>Estimate $f(x)=$</code> is acceptable. When using fractions in this field, use <code>$\dfrac{}{}$</code> as this is more legible.</li>
+<li><strong>Response Area Answer</strong>: Enter a reference answer. This will typically be the absolute solution to a problem. When requesting a symbolic answer, you must use the variable names (codes) you define in the 'Evaluate' tab.  Configure the answer where relevant (e.g. number of rows and columns).</li>
+<li><strong>Response Area Preview</strong>: Shows you what the configured response area will look like.</li>
 </ul>
 </li>
-<li>Parameters - configure as provided, and add new parameters as required. Details depend on the Evaluation Function.</li>
-<li>Input symbols - define a dictionary of symbols and their equivalent in code form. This essentially associates a LaTeX-rendered symbol with a machine-readable variable label, with the LaTeX render returned to the student through the preview. These symbols may also be hiddent to students. All inputs are plain text. For example, the symbol <code>$f(x)$</code> may have code <code>fx</code> and alternatives <code>f_x</code>, <code>f(x)</code>, <code>f</code>. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. This allow teachers to accept several alternative symbols, such as those with different cases or conventional expressions. The configuration of input symbols is a very important part of providing high quality feedback. Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden to the student but visible to the evaluation function.</li>
+</ul>
+<h3 id="2-evaluate">2. EVALUATE</h3>
+<p>Configure how student expressions are evaluated.</p>
+<p>This is a 'no code' parametric configuration. Settings will be upgraded as the system improves.</p>
+<ul>
+<li><strong><a href="https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/">Evaluation Function</a></strong> - Select an evaluation function from the list. For example:<ul>
+<li><code>isSimilar</code>: Best for numerical answers. It performs a basic comparison, allowing for a configurable tolerance (absolute and relative).</li>
+<li><code>compareExpressions</code>: Best for symbolic answers (e.g., equations).</li>
+</ul>
+</li>
+<li><strong>Evaluation Function Parameters</strong> - Configure as provided, and add new parameters as required. Details depend on the selected Evaluation Function.</li>
+<li>
+<p><strong>Input Symbols:</strong> This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:</p>
+<ul>
+<li><strong>Symbol:</strong> The LaTeX-rendered symbol (e.g., <code>$f(x)$</code>).</li>
+<li><strong>Code:</strong> The machine-readable variable name (e.g., <code>fx</code>). This is what you use in your reference answer and what the evaluation function sees.</li>
+<li><strong>Alternatives:</strong> A list of other codes you want to accept for the same symbol (e.g., <code>f_x</code>, <code>f(x)</code>, <code>f</code>). This allows you to anticipate different ways students might type the same thing.</li>
+<li><strong>Visibility:</strong> A <code>TRUE</code>/<code>FALSE</code> toggle. If "Display input symbols" is enabled in the Input tab, this setting determines whether a specific symbol is shown to the student. This allows you to show students common symbols while still accepting less common or alternative ones in the background.</li>
 </ul>
 </li>
 <li>
-<p>FEEDBACK: add 'cases'. Each case is an alternative reference answer, with customised parameters, so that multiple cases can be dealt with independently. Cases can be used to capture multiple correct approaches that are not equivalent. Cases can also be used to identify common incorrect approaches and to provide customised feedback. The FEEDBACK tab is typically populated after students start using the system, and when data is available to point to common expressions. Configuring a case works similarly to setting up the default answer in the INPUT tab, with added options for changing the colour of the given feedback, give custom feedback and toggling whether the case answer should be considered correct or not. Adding custom feedback will overwrite the feedback produced by the evaluation function. When a response is submitted, it is evaluated for all cases and feedback for the first case that matches will be displayed. When determining which matched case is first, the default answer described in the INPUT tab will take precedence over all other cases, otherwise the feedback for the matched case with the lowest number will be displayed (i.e. the answer given in the INPUT tab can be considered to be Case 0). <br> Feedback fields also support LaTeX equations in both <code>$f(x)$</code> and <code>$$f(x)$$</code> formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.</p>
+<p><strong>Input Symbols</strong> - Define a dictionary of symbols and their equivalent in code form.</p>
+<ul>
+<li>This essentially associates a LaTeX-rendered symbol with a machine-readable variable label, with the LaTeX render returned to the student through the preview. These symbols may also be hidden to students.</li>
+<li>All inputs are plain text. For example, the symbol <code>$f(x)$</code> may have code <code>fx</code> and alternatives <code>f_x</code>, <code>f(x)</code>, <code>f</code>. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. This allow teachers to accept several alternative symbols, such as those with different cases or conventional expressions.</li>
+<li>The configuration of input symbols is a very important part of providing high quality feedback.</li>
+<li>Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden to the student but visible to the evaluation function.</li>
+</ul>
 </li>
 </ul>
+<h3 id="3-feedback">3. FEEDBACK</h3>
+<p>Add alternative reference answers, 'cases', with customised parameters, so that multiple cases can be dealt with independently. Cases can be used to capture multiple correct approaches that are not equivalent. Cases can also be used to identify common incorrect approaches and to provide customised feedback. The FEEDBACK tab is typically populated after students start using the system, and when data is available to point to common expressions. Configuring a case works similarly to setting up the default answer in the INPUT tab, with added options for changing the colour of the given feedback, give custom feedback and toggling whether the case answer should be considered correct or not. Adding custom feedback will overwrite the feedback produced by the evaluation function. When a response is submitted, it is evaluated for all cases and feedback for the first case that matches will be displayed. When determining which matched case is first, the default answer described in the INPUT tab will take precedence over all other cases, otherwise the feedback for the matched case with the lowest number will be displayed (i.e. the answer given in the INPUT tab can be considered to be Case 0). <br> Feedback fields also support LaTeX equations in both <code>$f(x)$</code> and <code>$$f(x)$$</code> formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.</p>
 <p><img alt="Screenshot" src="screenshots/Feedback.gif" /></p>
-<ul>
-<li>TESTS: tests provide a systematic way to log what behaviour the teacher expects. It provides a useful record and an efficient way to retest the bevhaiour of a response area over time (e.g. as evaluation functions evolve, or as the subject matter itself changes).</li>
-</ul>
+<h3 id="4-test">4. TEST</h3>
+<p>tests provide a systematic way to log what behaviour the teacher expects. It provides a useful record and an efficient way to retest the bevhaiour of a response area over time (e.g. as evaluation functions evolve, or as the subject matter itself changes).</p>
 <h2 id="restrictions-on-changes-the-input-type">Restrictions on changes: the input type</h2>
 <p>It is possible to change the input type (e.g. from <em>Text</em> to <em>Number</em>) without any restrictions until the response area is saved (with or without publishing) to students.</p>
 <p>After the response area is saved, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.</p>
