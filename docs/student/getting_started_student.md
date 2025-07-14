@@ -36,12 +36,12 @@ See the [Answering Questions](answering_questions.md) page for more help with an
 ### Using the Workspace
 
 The Workspace provides you with various functionalities to assist you during your learning process:
-1. #### Canvas: 
+#### 1. Canvas: 
 A pane where you can write down your thought process and notes for the previewed question (handwriting, sticky notes & text).
 
 ![Canvas Interface](images/canvas_interface.png)
 
-2. #### Chat: 
+#### 2. Chat: 
 A chat interface connecting you with helpful AI Chatbots to discuss any questions you have on the current topic you are working on.
 
 ![Chat Interface](images/chat_interface.png)
