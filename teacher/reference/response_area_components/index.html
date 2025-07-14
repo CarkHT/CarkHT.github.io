@@ -449,14 +449,18 @@
 </ul>
 <h3 id="3-feedback">3. FEEDBACK</h3>
 <p>Here, you can go beyond a simple "correct/incorrect" and provide nuanced feedback by creating <strong>"cases."</strong></p>
-<p>Cases are an alternative answer you want to check for. You can use cases to:
--    Award full marks for a different but equally valid answer.
--    Identify a common mistake and provide specific, tailored feedback to help the student learn.</p>
-<p>For each case, you can:
--    Enter an alternative answer to check for.
--    Specify if the case should be marked as "correct" or "incorrect."
--    Write custom feedback text that overrides the default feedback from the evaluation function.
--    Change the color of the feedback (e.g., green for correct, orange for a hint).</p>
+<p>Cases are an alternative answer you want to check for. You can use cases to:</p>
+<ul>
+<li>Award full marks for a different but equally valid answer.</li>
+<li>Identify a common mistake and provide specific, tailored feedback to help the student learn.</li>
+</ul>
+<p>For each case, you can:</p>
+<ul>
+<li>Enter an alternative answer to check for.</li>
+<li>Specify if the case should be marked as "correct" or "incorrect."</li>
+<li>Write custom feedback text that overrides the default feedback from the evaluation function.</li>
+<li>Change the color of the feedback (e.g., green for correct, orange for a hint).</li>
+</ul>
 <p>Teachers typically add cases after students start submitting answers, and data about common student answers is created.</p>
 <p>When a student submits a response, it's evaluated against all cases. The system displays feedback for the <strong>first case that matches</strong>. The main answer you set in the 'Input' tab is treated as "Case 0" and is always checked first.</p>
 <p>Feedback fields also support LaTeX equations in both <code>$f(x)$</code> and <code>$$f(x)$$</code> formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.</p>
@@ -482,10 +486,12 @@
 <li><strong>The Result:</strong> Because <code>Version 1</code> was published, changing the input type triggers the replacement process. The original "Response Area 2" is archived (with its student data) in <code>Version 1</code>. A brand new "Response Area 3" (with the <em>Table</em> input type) is created in its place in <code>Version 2</code>.</li>
 <li><strong>Publish Again:</strong> You publish <code>Version 2</code>.</li>
 </ol>
-<p><strong>The Takeaway:</strong>
--   New student submissions will be recorded for "Response Area 1" (<em>Number</em>) and "Response Area 3" (<em>Table</em>).
--   The original submissions to "Response Area 2" are safe and preserved with <code>Version 1</code>, but you won't see them in the analytics for the currently published <code>Version 2</code>.
--   If you later <strong>Revert</strong> to <code>Version 1</code>, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".</p>
+<p><strong>The Takeaway:</strong></p>
+<ul>
+<li>New student submissions will be recorded for "Response Area 1" (<em>Number</em>) and "Response Area 3" (<em>Table</em>).</li>
+<li>The original submissions to "Response Area 2" are safe and preserved with <code>Version 1</code>, but you won't see them in the analytics for the currently published <code>Version 2</code>.</li>
+<li>If you later <strong>Revert</strong> to <code>Version 1</code>, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".</li>
+</ul>
 <p><strong>Please note:</strong> All statistics and submissions are currently displayed against the published question version only. So, though the submissions against "Response Area 2" are preserved, it is not currently possible to see them. We are working on the improvement to make this possible.</p>
 <h3 id="example-2-changing-input-type-on-saved-response-area">Example 2 - changing input type on SAVED response area</h3>
 <p>This scenario works almost identically to the one above. The key is that once a question version is <strong>Saved</strong>, the input types of its response areas are locked to protect potential future analytics. If you edit a saved question and change an input type, it will still trigger the replacement process (archiving the old and creating a new response area).</p>
@@ -495,9 +501,11 @@
 <li><strong>Edit the Question:</strong> You start editing, which creates a new draft (<code>Version 2</code>).</li>
 <li><strong>Add a New Response Area:</strong> You add "Response Area 3."</li>
 </ol>
-<p><strong>The State of <code>Version 2</code> (Draft):</strong>
--   The input types for "Response Area 1" and "Response Area 2" are <strong>locked</strong>. This is because they exist on a previously saved version (<code>Version 1</code>). To change their type, you must go through the replacement process described above.
--   The input type for the new "Response Area 3" is <strong>unlocked</strong>. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish <code>Version 2</code>.</p></div>
+<p><strong>The State of <code>Version 2</code> (Draft):</strong></p>
+<ul>
+<li>The input types for "Response Area 1" and "Response Area 2" are <strong>locked</strong>. This is because they exist on a previously saved version (<code>Version 1</code>). To change their type, you must go through the replacement process described above.</li>
+<li>The input type for the new "Response Area 3" is <strong>unlocked</strong>. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish <code>Version 2</code>.</li>
+</ul></div>
             </div>
         </div>
 
