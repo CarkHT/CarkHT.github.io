@@ -92,14 +92,16 @@ This is a 'no code' parametric configuration. Settings will be upgraded as the s
 Here, you can go beyond a simple "correct/incorrect" and provide nuanced feedback by creating **"cases."**
 
 Cases are an alternative answer you want to check for. You can use cases to:
--    Award full marks for a different but equally valid answer.
--    Identify a common mistake and provide specific, tailored feedback to help the student learn.
+
+*   Award full marks for a different but equally valid answer.
+*   Identify a common mistake and provide specific, tailored feedback to help the student learn.
 
 For each case, you can:
--    Enter an alternative answer to check for.
--    Specify if the case should be marked as "correct" or "incorrect."
--    Write custom feedback text that overrides the default feedback from the evaluation function.
--    Change the color of the feedback (e.g., green for correct, orange for a hint).
+
+*   Enter an alternative answer to check for.
+*   Specify if the case should be marked as "correct" or "incorrect."
+*   Write custom feedback text that overrides the default feedback from the evaluation function.
+*   Change the color of the feedback (e.g., green for correct, orange for a hint).
 
 Teachers typically add cases after students start submitting answers, and data about common student answers is created.
 
@@ -137,9 +139,10 @@ The reason why the input type change is restricted is to preserve high quality d
 6.  **Publish Again:** You publish `Version 2`.
 
 **The Takeaway:**
--   New student submissions will be recorded for "Response Area 1" (*Number*) and "Response Area 3" (*Table*).
--   The original submissions to "Response Area 2" are safe and preserved with `Version 1`, but you won't see them in the analytics for the currently published `Version 2`.
--   If you later **Revert** to `Version 1`, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".
+
+*   New student submissions will be recorded for "Response Area 1" (*Number*) and "Response Area 3" (*Table*).
+*   The original submissions to "Response Area 2" are safe and preserved with `Version 1`, but you won't see them in the analytics for the currently published `Version 2`.
+*   If you later **Revert** to `Version 1`, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".
 
 **Please note:** All statistics and submissions are currently displayed against the published question version only. So, though the submissions against "Response Area 2" are preserved, it is not currently possible to see them. We are working on the improvement to make this possible.
 
@@ -154,6 +157,7 @@ This scenario works almost identically to the one above. The key is that once a 
 3.  **Add a New Response Area:** You add "Response Area 3."
 
 **The State of `Version 2` (Draft):**
--   The input types for "Response Area 1" and "Response Area 2" are **locked**. This is because they exist on a previously saved version (`Version 1`). To change their type, you must go through the replacement process described above.
--   The input type for the new "Response Area 3" is **unlocked**. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish `Version 2`.
+
+*   The input types for "Response Area 1" and "Response Area 2" are **locked**. This is because they exist on a previously saved version (`Version 1`). To change their type, you must go through the replacement process described above.
+*   The input type for the new "Response Area 3" is **unlocked**. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish `Version 2`.
 
