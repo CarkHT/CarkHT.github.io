@@ -382,14 +382,14 @@
 <li><strong>What is NOT copied:</strong> Any data generated during use is not carried over. This includes comments, flags, likes, and student submissions.</li>
 </ul>
 <h3 id="reorder">Reorder</h3>
-<p>It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way as reordering of parts.</p>
+<p>It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way as reordering parts.</p>
 <h3 id="delete-response-area">Delete Response Area</h3>
 <p>You can delete a response area without any restrictions. A pop-up message appears to confirm the deletion.</p>
 <p>If students have already submitted answers to the response area you are deleting, the confirmation message will warn you.</p>
 <p>See more information about analytics for deleted response areas in <a href="../../guides/analytics">Analytics</a></p>
 <h2 id="response-area-configuration">Response Area configuration</h2>
-<p>To configure a response area, click the configure button:
-<img alt="conifgure button" src="../images/configure.png" /></p>
+<p>To configure a response area, click the configure button: </p>
+<p><img alt="conifgure button" src="../images/configure.png" /></p>
 <p>This opens the <strong>Response Area Panel</strong>, separated into four tabs:</p>
 <ol>
 <li><strong>Input:</strong> Define what the student sees and how they answer.</li>
@@ -415,8 +415,7 @@
 </ul>
 </li>
 </ul>
-<p>Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to 'Number', as this supports isSimilar, while assessing an equation is best suited to the 'Expression' field, as this supports compareExpressions.</p>
-<p>In short, choose the most suitable input style for your desired answer.</p>
+<p>Each input type has suitable evaluation functions. Try to choose the most suitable input style for your desired answer. See the subpages for more detailed information about each input type.</p>
 <ul>
 <li>
 <p><strong>Configuration Options</strong></p>
@@ -451,13 +450,13 @@
 <h3 id="3-feedback">3. FEEDBACK</h3>
 <p>Here, you can go beyond a simple "correct/incorrect" and provide nuanced feedback by creating <strong>"cases."</strong></p>
 <p>Cases are an alternative answer you want to check for. You can use cases to:
-*   Award full marks for a different but equally valid answer.
-*   Identify a common mistake and provide specific, tailored feedback to help the student learn.</p>
+-    Award full marks for a different but equally valid answer.
+-    Identify a common mistake and provide specific, tailored feedback to help the student learn.</p>
 <p>For each case, you can:
-*   Enter an alternative answer to check for.
-*   Specify if the case should be marked as "correct" or "incorrect."
-*   Write custom feedback text that overrides the default feedback from the evaluation function.
-*   Change the color of the feedback (e.g., green for correct, orange for a hint).</p>
+-    Enter an alternative answer to check for.
+-    Specify if the case should be marked as "correct" or "incorrect."
+-    Write custom feedback text that overrides the default feedback from the evaluation function.
+-    Change the color of the feedback (e.g., green for correct, orange for a hint).</p>
 <p>Teachers typically add cases after students start submitting answers, and data about common student answers is created.</p>
 <p>When a student submits a response, it's evaluated against all cases. The system displays feedback for the <strong>first case that matches</strong>. The main answer you set in the 'Input' tab is treated as "Case 0" and is always checked first.</p>
 <p>Feedback fields also support LaTeX equations in both <code>$f(x)$</code> and <code>$$f(x)$$</code> formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.</p>
@@ -484,9 +483,9 @@
 <li><strong>Publish Again:</strong> You publish <code>Version 2</code>.</li>
 </ol>
 <p><strong>The Takeaway:</strong>
-*   New student submissions will be recorded for "Response Area 1" (<em>Number</em>) and "Response Area 3" (<em>Table</em>).
-*   The original submissions to "Response Area 2" are safe and preserved with <code>Version 1</code>, but you won't see them in the analytics for the currently published <code>Version 2</code>.
-*   If you later <strong>Revert</strong> to <code>Version 1</code>, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".</p>
+-   New student submissions will be recorded for "Response Area 1" (<em>Number</em>) and "Response Area 3" (<em>Table</em>).
+-   The original submissions to "Response Area 2" are safe and preserved with <code>Version 1</code>, but you won't see them in the analytics for the currently published <code>Version 2</code>.
+-   If you later <strong>Revert</strong> to <code>Version 1</code>, you will once again see the analytics for "Response Area 1" and the original "Response Area 2".</p>
 <p><strong>Please note:</strong> All statistics and submissions are currently displayed against the published question version only. So, though the submissions against "Response Area 2" are preserved, it is not currently possible to see them. We are working on the improvement to make this possible.</p>
 <h3 id="example-2-changing-input-type-on-saved-response-area">Example 2 - changing input type on SAVED response area</h3>
 <p>This scenario works almost identically to the one above. The key is that once a question version is <strong>Saved</strong>, the input types of its response areas are locked to protect potential future analytics. If you edit a saved question and change an input type, it will still trigger the replacement process (archiving the old and creating a new response area).</p>
@@ -497,8 +496,8 @@
 <li><strong>Add a New Response Area:</strong> You add "Response Area 3."</li>
 </ol>
 <p><strong>The State of <code>Version 2</code> (Draft):</strong>
-*   The input types for "Response Area 1" and "Response Area 2" are <strong>locked</strong>. This is because they exist on a previously saved version (<code>Version 1</code>). To change their type, you must go through the replacement process described above.
-*   The input type for the new "Response Area 3" is <strong>unlocked</strong>. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish <code>Version 2</code>.</p></div>
+-   The input types for "Response Area 1" and "Response Area 2" are <strong>locked</strong>. This is because they exist on a previously saved version (<code>Version 1</code>). To change their type, you must go through the replacement process described above.
+-   The input type for the new "Response Area 3" is <strong>unlocked</strong>. You can change it freely because it doesn't exist on any previously saved version and has no associated student data to protect. It will only become locked after you Save or Publish <code>Version 2</code>.</p></div>
             </div>
         </div>
 
